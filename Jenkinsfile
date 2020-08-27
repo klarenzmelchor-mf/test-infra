@@ -1,9 +1,5 @@
 #!groovy
 
-def prodId = "1"
-def region = "us-east-2"
-def environment = "dev"
-
 def context = [
     now                 : new Date(),
     branchName          : env.BRANCH_NAME,
