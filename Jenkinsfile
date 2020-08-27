@@ -49,7 +49,7 @@ try {
 
                 }
 
-                stage("Apply - ${prodId}") {
+                stage("Apply - ${productId}") {
                     
                     echo("WithCredentials")
                     echo("terragrunt apply plan.tfplan")                         
