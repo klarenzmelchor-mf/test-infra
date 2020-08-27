@@ -1,9 +1,9 @@
 #!groovy
 
 environment {
-    productId = ""
-    region = ""
-    envName = ""
+    productId = "1"
+    region = "us-east-2"
+    envName = "dev"
 }
 
 def context = [
