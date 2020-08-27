@@ -6,7 +6,7 @@ def environment = "dev"
 
 def context = [
     now                 : new Date(),
-    branchName          : flags._branchName,
+    branchName          : env.BRANCH_NAME,
     version             : env.BUILD_NUMBER,
     application         : "coe_ssa_saas-infra",
     applicationUriRoot  : "coe_ssa_saas-infra",
