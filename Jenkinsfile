@@ -1,5 +1,11 @@
 #!groovy
 
+environment {
+    productId = ""
+    region = ""
+    envName = ""
+}
+
 def context = [
     now                 : new Date(),
     branchName          : env.BRANCH_NAME,
@@ -39,7 +45,7 @@ try {
                 stage("Plan - ${prodId}") {
 
                     echo("WithCredentials")
-                    echo("cd /main/${region}/${prodId}/${environment}")
+                    echo("cd /main/${region}/${prodId}/${envName}")
                     echo("terragrunt plan-all -out=plan.tfplan")
                     echo("terragrunt show -no-color plan.tfplan >> plan.txt")                     
 
