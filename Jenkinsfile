@@ -1,10 +1,8 @@
 #!groovy
 
-environment {
-    productId = "1"
-    region = "us-east-2"
-    envName = "dev"
-}
+def productId = 1
+def region = "us-east-2"
+def envName = "dev"
 
 def context = [
     now                 : new Date(),
