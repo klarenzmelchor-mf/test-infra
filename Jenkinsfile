@@ -128,34 +128,36 @@ def buildInfra(def prodId, def environment){
 }
 
 def buildCode(def prodId, def environment){
+    //println "Building Infra for ${prodId} in ${environment}"
 
     switch (environment) {
-            case "dev":
-                runUnitTest(prodId, environment)
-            case "stage":
-                
-                break;
-            case "prod":
-                break;
-            default:
+        case "dev":
+            println "Building Infra for ${prodId} in ${environment}"
+        case "stage":
+            println "Building Infra for ${prodId} in ${environment}"
+            break;
+        case "prod":
+            println "Building Infra for ${prodId} in ${environment}"
+            break;
+        default:
 }
 
-def triggerBuild(def prodId){
-    println "Triggering build for ${prodId}"
+// def triggerBuild(def prodId){
+//     println "Triggering build for ${prodId}"
 
-    switch (prodId) {
-            case "aa" || "AA":
-                runUnitTest(prodId, environment)
-            case "stage":
+//     switch (prodId) {
+//             case "aa" || "AA":
+//                 runUnitTest(prodId, environment)
+//             case "stage":
                 
-                break;
-            case "prod":
-                this.stage = "${environment}v1"
-                this.basePath = 'v1'
-                this.dbStack = "rds-${context.application}-aurora-${environment}"  //assuming aurora postgres for database???
-                break;
-            default:
-}
+//                 break;
+//             case "prod":
+//                 this.stage = "${environment}v1"
+//                 this.basePath = 'v1'
+//                 this.dbStack = "rds-${context.application}-aurora-${environment}"  //assuming aurora postgres for database???
+//                 break;
+//             default:
+// }
 
 def loadRegionMap(flags){
     return [
