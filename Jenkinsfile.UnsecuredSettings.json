@@ -1,0 +1,11 @@
+{
+    "ProductIds": {
+        "Default": ["aa", "ig", "idmportal", "interset", "arcsight", "fasdpp"]
+    },
+    "Environments": {
+        "Default": "test",
+        "Development": "dev",
+        "Staging": "stage",
+        "Production": "prod"
+    }
+}
