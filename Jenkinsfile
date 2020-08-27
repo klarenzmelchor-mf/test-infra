@@ -35,17 +35,17 @@ try {
 
                 }
 
-                stage("Init - ${prodId}") {
+                stage("Init - ${productId}") {
 
                     echo("WithCredentials")                        
                     echo("terragrunt init")                        
 
                 }
 
-                stage("Plan - ${prodId}") {
+                stage("Plan - ${productId}") {
 
                     echo("WithCredentials")
-                    echo("cd /main/${region}/${prodId}/${envName}")
+                    echo("cd /main/${region}/${productId}/${envName}")
                     echo("terragrunt plan-all -out=plan.tfplan")
                     echo("terragrunt show -no-color plan.tfplan >> plan.txt")                     
 
