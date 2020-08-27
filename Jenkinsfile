@@ -20,7 +20,7 @@ println "Build number='${env.BUILD_NUMBER}'"
 
 try {
 
-    lock("${context.application}-${context.branchName}-build") {
+    //lock("${context.application}-${context.branchName}-build") {
 
         node("master"){
 
@@ -67,7 +67,7 @@ try {
         }
 
 
-    }
+    //}
 
 }
 
